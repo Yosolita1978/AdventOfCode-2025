@@ -21,19 +21,10 @@ function compareList (leftList, rightList){
     for(let i = 0; i < sortedLeft.length; i++){
       //compare
       if(sortedLeft[i] < sortedRight[i]){
-        tempDist = sortedRight[i] - sortedLeft[i];
+        tempDist = Math.abs(sortedRight[i] - sortedLeft[i]);
         distances.push(tempDist)
       }
   
-      if(sortedLeft[i] > sortedRight[i]){
-        tempDist = sortedLeft[i] - sortedRight[i];
-        distances.push(tempDist);
-      }
-  
-      if(sortedLeft[i] === sortedRight[i] ){
-        tempDist = 0;
-        distances.push(tempDist);
-      }
     }
   
     return distances;
